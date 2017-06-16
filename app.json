@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/home/home",
+    "page/park/park_map",
+    "page/me/me"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0fCA52",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "iconPath": "image/ic_menu_01.png",
+      "selectedIconPath": "image/ic_menu_05.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/park/park_map",
+      "iconPath": "image/ic_menu_02.png",
+      "selectedIconPath": "image/ic_menu_06.png",
+      "text": "停哪儿"
+    },{
+      "pagePath": "pages/me/me",
+      "iconPath": "image/ic_menu_03.png",
+      "selectedIconPath": "image/ic_menu_07.png",
+      "text": "我"
+    }]
+  }
+}

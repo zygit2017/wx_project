@@ -1,0 +1,39 @@
+<!--home.wxml-->
+
+
+<view class="container">
+
+  <view class="page-body">
+    <view>
+      <image style="width: 375px; height: 144px;" src="../../image/ad_home.png" />
+    </view>
+
+
+    <view class="flex-wrp" style="flex-direction:row; vertical-align: middle;">
+      <image style="width: 24px; height: 24px; padding-right: 48rpx" src="../../image/ic_location_parking.png" />
+      <view class="text_box">附近停车场</view>
+      <view style="margin-left:50px">{{count}}</view>
+
+    </view>
+
+
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title" />
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" maxlength="10" placeholder="输入车牌号" bindinput="bindNumInput" value="{{carNum}}" />
+      </view>
+    </view>
+  </view>
+
+  <view class="page-section-spacing">
+
+    <view class="flex-wrp" style="flex-direction:row;align-items:left;">
+      <block wx:key="carNums" wx:for="{{historyArray}}">
+        <button style="margin-right: 10rpx" id="{{item.carNum}}" data-hi="WeChat" bindtap="carNumButtonTab"> {{item.carNum}} </button>
+      </block>
+    </view>
+
+    <button type="primary" disabled="{{carNum.length <= 0}}">查询缴费</button>
+
+  </view>
+</view>
